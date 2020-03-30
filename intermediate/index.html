@@ -32,14 +32,14 @@
 
             function printTable(xmlDoc) {
                 var table = "<tr><th>Title</th><th>Artist</th><th>Album</th><th>Year</th></tr>";
-                var xmlBooks = xmlDoc.getElementsByTagName("song");
-                for (let i = 0; i < xmlBooks.length; i++) {
+                var xmlSongs = xmlDoc.getElementsByTagName("song");
+                for (let i = 0; i < xmlSongs.length; i++) {
                     table += 
                             `<tr>
-                                <td>${xmlBooks[i].getElementsByTagName("title")[0].textContent}</td>
-                                <td>${xmlBooks[i].getElementsByTagName("artist")[0].textContent}</td>
-                                <td>${xmlBooks[i].getElementsByTagName("album")[0].textContent}</td>
-                                <td>${xmlBooks[i].getElementsByTagName("year")[0].textContent}</td>
+                                <td>${xmlSongs[i].getElementsByTagName("title")[0].textContent}</td>
+                                <td>${xmlSongs[i].getElementsByTagName("artist")[0].textContent}</td>
+                                <td>${xmlSongs[i].getElementsByTagName("album")[0].textContent}</td>
+                                <td>${xmlSongs[i].getElementsByTagName("year")[0].textContent}</td>
                             </tr>`;
                     
                 }
